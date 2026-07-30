@@ -1,7 +1,30 @@
 aid: minimus
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/minimus.png
 name: Minimus
-description: Minimus is a company surfaced as a portfolio company of mayfield and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Minimus provides hardened, minimal container images designed for
+  security-conscious teams. Its images are built from source with near-zero CVEs,
+  rebuilt daily, and typically around 95% smaller than standard alternatives,
+  with drop-in compatibility for existing workflows. Images ship audit-ready for
+  compliance regimes including FedRAMP, NIST 800-190, FIPS 140-3, CIS, STIG, and
+  SLSA L3, and the company is SOC 2 and ISO 27001 certified. The programmatic
+  surface is the first-party minicli tool (manage private image recipes as code
+  and trigger asynchronous builds), an open MinimOS apk package repository, and a
+  generate-skills feature that makes the CLI agent-native for assistants such as
+  Claude, Codex, and Cursor. Surfaced as a Mayfield portfolio company and
+  enriched by the API Evangelist pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/minimus/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,9 +34,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Container Images
+- Container Security
+- Supply Chain Security
+- DevSecOps
+- Compliance
+- CLI
+- Hardened Images
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,3 +53,50 @@ maintainers:
 common:
 - type: Website
   url: https://minimus.io
+- type: DeveloperPortal
+  url: https://images.minimus.io
+- type: Documentation
+  url: https://docs.minimus.io
+- type: GettingStarted
+  url: https://docs.minimus.io
+- type: Support
+  url: https://support.minimus.io
+- type: Blog
+  url: https://minimus.io/blog
+- type: Pricing
+  url: https://minimus.io/pricing
+- type: SignUp
+  url: https://images.minimus.io/
+- type: TrustCenter
+  url: https://minimus.io/trust-center
+- type: TermsOfService
+  url: https://cdn.prod.website-files.com/67f93369f15385dea5315c58/6a4d2b80e927baf0df8db085_Minimus_-_Website_Terms_of_Use_June_2026.pdf
+- type: PrivacyPolicy
+  url: https://minimus.io/privacy-policy
+- type: CLI
+  url: cli/minimus-cli.yml
+- type: Packages
+  url: packages/minimus-packages.yml
+- type: Authentication
+  url: authentication/minimus-authentication.yml
+- type: Conventions
+  url: conventions/minimus-conventions.yml
+- type: Lifecycle
+  url: lifecycle/minimus-lifecycle.yml
+- type: Conformance
+  url: conformance/minimus-conformance.yml
+- type: Compliance
+  url: security/minimus-trust-center.yml
+- type: TrustCenter
+  url: security/minimus-trust-center.yml
+- type: DomainSecurity
+  url: security/minimus-domain-security.yml
+- type: WellKnown
+  url: well-known/minimus-well-known.yml
+- type: LLMsTxt
+  url: llms/minimus-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 10
+  pass: local-v1
