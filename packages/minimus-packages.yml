@@ -1,0 +1,50 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.minimus.io/advanced-tooling/minicli
+description: >-
+  First-party distributables published by Minimus. Minimus does not publish
+  language client SDK libraries to public package registries; its programmatic
+  surface is the minicli binary plus an open MinimOS apk package repository.
+packages:
+- name: minicli
+  kind: cli-binary
+  official: true
+  language: go
+  description: Static CLI binary for managing private Minimus image recipes and builds.
+  distribution: direct-binary
+  download: https://images.minimus.io/manage/minicli
+  platforms: [darwin/amd64, darwin/arm64, linux/amd64, linux/arm64]
+  docs: https://docs.minimus.io/advanced-tooling/minicli
+- name: MinimOS package repository
+  kind: os-package-registry
+  official: true
+  package_manager: apk
+  registry: packages.mini.dev/os
+  authentication: none
+  description: >-
+    Open Alpine Package Keeper (apk) repository that Minimus images point
+    /etc/apk/repositories at by default. Open to all; no credentials required.
+    Use apk add --no-cache <package_name> from a dev-tagged image as root.
+  docs: https://docs.minimus.io/advanced-tooling/package-manager-access
+public_registry_search:
+- registry: npm
+  result: none-first-party
+- registry: PyPI
+  result: none-first-party
+- registry: Maven Central
+  result: none-first-party
+- registry: NuGet
+  result: none-first-party
+- registry: pkg.go.dev
+  result: none-first-party
+- registry: RubyGems
+  result: none-first-party
+- registry: crates.io
+  result: none-first-party
+- registry: Packagist
+  result: none-first-party
+notes: >-
+  Container images are the core product, distributed via an OCI registry and
+  pulled with standard tooling (docker/crane/apk); minicli is the client for
+  managing private image recipes. No first-party language SDK libraries found on
+  public package registries as of the search date.

@@ -1,0 +1,33 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.minimus.io
+description: >-
+  Versioning, support, and remediation lifecycle for Minimus hardened container
+  images and the minicli tool.
+image_versioning:
+  policy: >-
+    Images are offered across All images, Major versions, and Minor versions.
+    Zero-CVE images are rebuilt daily from source.
+  rebuild_cadence: daily
+  evidence: 'Pricing/product: "Zero-CVE images, rebuilt daily"; version tiers "All images, Major versions, Minor versions".'
+cve_remediation_sla:
+  critical: within 48 hours of upstream availability
+  high: within 14 days
+  medium: within 14 days
+  enterprise: contractually guaranteed CVE remediation
+  evidence: '"We patch critical CVEs within 48 hours of upstream availability; high and medium within 14 days."'
+support:
+  community: support portal (https://support.minimus.io)
+  enterprise: 24x7 enterprise support with contractually guaranteed SLAs
+status_page:
+  found: false
+  note: No public status page located as of the search date.
+deprecation_policy:
+  found: false
+  note: No formal image/API deprecation or Sunset-header policy located as of the search date.
+cli:
+  binary: minicli
+  version_command: minicli version
+notes: >-
+  Lifecycle centers on daily zero-CVE rebuilds and time-bound CVE patch SLAs
+  rather than dated API version deprecation. See security/minimus-trust-center.yml.

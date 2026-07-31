@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.minimus.io/advanced-tooling/minicli
+description: >-
+  Cross-cutting runtime and interaction semantics for the Minimus programmatic
+  surface (minicli + MinimOS package repository). Minimus has no documented
+  public REST API; conventions below describe the CLI-driven control plane.
+authentication:
+  style: bearer-token
+  parameter: MINICLI_TOKEN
+  detail: See authentication/minimus-authentication.yml
+resource_as_code:
+  style: declarative-yaml
+  detail: >-
+    Private images are declared as YAML recipes. `image init` scaffolds a
+    template of all supported fields; `image apply` creates/updates the recipe
+    from the local YAML file; `image export` round-trips a remote recipe back to
+    YAML. This is a desired-state, apply-style convention.
+async_execution:
+  style: submit-and-poll
+  detail: >-
+    Builds are asynchronous. `image build submit` triggers a build; `image build
+    status` polls its current state. There is no documented synchronous build.
+package_access:
+  registry: packages.mini.dev/os
+  package_manager: apk
+  auth: none
+  detail: 'apk add --no-cache <package_name> as root from a dev-tagged image.'
+agent_native:
+  feature: minicli generate-skills
+  detail: >-
+    Generates AI agent skills so assistants (Claude, Codex, Cursor) can drive
+    minicli in natural language. This is a first-party agent-readiness surface.
+integrations_enterprise:
+  detail: 'Enterprise plan adds integration actions for GitHub, Slack, and webhooks.'
+error_envelope:
+  found: false
+  note: No documented machine-readable error envelope (e.g. RFC 9457) for a public API.
+rate_limit_signaling:
+  found: false
+  note: No documented rate-limit headers for a public API.
+cross_links:
+  authentication: authentication/minimus-authentication.yml
+  lifecycle: lifecycle/minimus-lifecycle.yml
+  cli: cli/minimus-cli.yml
+  packages: packages/minimus-packages.yml

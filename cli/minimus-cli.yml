@@ -1,0 +1,77 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.minimus.io/advanced-tooling/minicli
+name: minicli
+description: >-
+  First-party command-line tool for Minimus. Manages private hardened container
+  image recipes as code, triggers and tracks asynchronous private image builds,
+  and generates AI agent skills so assistants can drive minicli in natural
+  language. Distributed as a single static binary.
+docs: https://docs.minimus.io/advanced-tooling/minicli
+install_docs: https://docs.minimus.io/manage/minicli
+console: https://images.minimus.io/manage/minicli
+platforms:
+- os: macos
+  arch: [amd64, arm64]
+- os: linux
+  arch: [amd64, arm64]
+install:
+- method: curl
+  note: Download the latest static binary from the console (Manage > minicli). curl, wget, or direct file download are offered.
+- method: wget
+  note: Alternate binary download command shown in the console.
+- method: binary-download
+  note: Direct binary download from images.minimus.io/manage/minicli.
+authentication:
+  style: bearer-token
+  token_source: https://images.minimus.io/manage/token
+  env_var: MINICLI_TOKEN
+  methods:
+  - name: environment-variable
+    recommended_for: ci-cd
+    example: 'export MINICLI_TOKEN={token}'
+  - name: login-command
+    recommended_for: local
+    example: 'echo "{token}" | minicli login'
+  note: All commands require MINICLI_TOKEN to be set.
+command_groups:
+- name: image
+  description: Manage private image recipes and builds.
+  commands:
+  - id: image init
+    summary: Create a local YAML template with all supported image fields.
+  - id: image apply
+    summary: Create or update a private image recipe from a local YAML file.
+  - id: image build submit
+    summary: Trigger an asynchronous build for a private image.
+  - id: image build status
+    summary: Look up the current status of a private image build.
+  - id: image export
+    summary: Retrieve the configuration of a remote private image and output it as a YAML file.
+  - id: image list
+    summary: List private or starter images.
+  - id: image get
+    summary: Get the full details of a private image.
+  - id: image delete
+    summary: Delete a private image from your account.
+- name: bundle
+  description: Manage file bundles for PKI certificates and configuration files.
+  commands:
+  - id: bundle list
+    summary: List file bundles for PKI certificates and configuration files.
+- name: utility
+  description: Utility and agent-tooling commands.
+  commands:
+  - id: version
+    summary: Display the current version of the minicli binary.
+  - id: generate-skills
+    summary: Generate AI agent skills so assistants (Claude, Codex, Cursor) can interact with minicli using natural language.
+key_flows:
+- name: Private image as code
+  steps: [image init, image apply, image build submit, image build status]
+- name: Agent-native onboarding
+  steps: [generate-skills]
+notes: >-
+  minicli is the primary programmatic surface for Minimus. The build model is
+  asynchronous: image build submit returns a build to be polled with image build
+  status. The binary itself lives in packages/ (see packages/minimus-packages.yml).

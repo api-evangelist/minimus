@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://minimus.io/trust-center
+name: Minimus Trust Center
+url: https://minimus.io/trust-center
+certifications:
+- name: SOC 2
+  status: certified
+  evidence: '"Minimus is both SOC-2 and ISO 27001 certified. Reports are available by request."'
+  reports: on-request
+- name: ISO 27001
+  status: certified
+  evidence: '"Minimus is both SOC-2 and ISO 27001 certified. Reports are available by request."'
+  reports: on-request
+compliance_frameworks_supported:
+- name: FedRAMP
+  context: images built to support FedRAMP-aligned deployments
+- name: 'NIST 800-190'
+  context: container security compliance
+- name: FIPS
+  context: FIPS-validated / FIPS-compliant images
+- name: CIS
+  context: CIS-benchmarked hardened images
+- name: STIG
+  context: STIG-compliant images
+patch_sla:
+  critical: within 48 hours of upstream availability
+  high: within 14 days
+  medium: within 14 days
+  evidence: '"We patch critical CVEs within 48 hours of upstream availability; high and medium within 14 days."'
+notes: >-
+  SOC 2 and ISO 27001 are audited certifications (reports by request). FedRAMP,
+  NIST 800-190, FIPS, CIS and STIG describe compliance postures of the images
+  Minimus ships rather than certifications of Minimus the company.

@@ -1,0 +1,109 @@
+# Minimus Documentation
+
+## Docs
+
+- [CouchDB TLS Tutorial](https://docs.minimus.io/advanced-guides/couchdb-tls.md): How to deploy a CouchDB server and establish a secure TLS connection with self-signed, locally issued certificates
+- [Java FIPS Guidelines](https://docs.minimus.io/advanced-guides/java-fips-tutorial.md): How to build Java applications with Minimus FIPS 140-3 validated images
+- [Keycloak FIPS Tutorial](https://docs.minimus.io/advanced-guides/keycloak-fips.md): How to deploy Keycloak FIPS with a FIPS-approved keystore
+- [MariaDB TLS Tutorial](https://docs.minimus.io/advanced-guides/mariadb-tls.md): A guide to setting up MariaDB and testing that it accepts TLS connections, enforces authentication, and allows secure read/write operations from a test client
+- [Mongo TLS Tutorial](https://docs.minimus.io/advanced-guides/mongo-tls.md): A guide to setting up Mongo and testing that it accepts TLS connections, enforces authentication, and allows secure read/write operations from a test client
+- [MySQL TLS Tutorial](https://docs.minimus.io/advanced-guides/mysql-tls.md): A guide to setting up MySQL and testing that it accepts TLS connections, enforces authentication, and allows secure read/write operations from a test client
+- [Postgres TLS Tutorial](https://docs.minimus.io/advanced-guides/postgres-tls.md): A guide to setting up Postgres and testing that it accepts TLS connections, enforces authentication, and allows secure read/write operations from a test client
+- [RabbitMQ TLS Tutorial](https://docs.minimus.io/advanced-guides/rabbitmq-tls.md): A guide to setting up RabbitMQ and testing that it accepts TLS connections, enforces authentication, and allows secure read/write operations from a test client
+- [Redis TLS Tutorial](https://docs.minimus.io/advanced-guides/redis-tls.md): A guide to setting up Redis and testing that it accepts TLS connections, enforces authentication, and allows secure read/write operations from a test client
+- [Hardening Compiler Flags for C/C++](https://docs.minimus.io/basics/compiler-options.md): Understand how Minimus implements OpenSSF hardening recommendations for compiling packages dependent on GCC and Clang
+- [Image Entrypoint](https://docs.minimus.io/basics/entrypoint.md): About image entrypoints in Minimus and how to work with them
+- [glibc](https://docs.minimus.io/basics/glibc.md): Why Minimus uses glibc over musl and how it benefits security, DNS resolution, and compatibility
+- [Public Package Access](https://docs.minimus.io/basics/package-manager-access.md): Install Minimus packages directly in Minimus images using a package manager to experiment with options and extend images
+- [Tags & Digests](https://docs.minimus.io/basics/tags-and-digests.md): Understand the differences between image tags and digests and know when each are recommended
+- [Default User](https://docs.minimus.io/basics/user.md): Why Minimus containers usually default to an unprivileged user and how to work around user permissions
+- [FIPS 140-3 Cryptography](https://docs.minimus.io/compliance/fips.md): About FIPS 140-3 validated Minimus images, kernel independence, FIPS validation, and more
+- [OpenSSL FIPS Entropy Provider](https://docs.minimus.io/compliance/fips-entropy-provider.md): Understand why the OpenSSL FIPS validated module is hardware agnostic
+- [OpenSSL FIPS Validated Module](https://docs.minimus.io/compliance/fips-images.md): Understand how Minimus implements the OpenSSL FIPS 140-3 module
+- [Custom FIPS Testing](https://docs.minimus.io/compliance/fips-testing.md): How to test your private images for FIPS compliance
+- [OpenSSL FIPS Verifications](https://docs.minimus.io/compliance/fips-validations.md): Run a script to examine the ciphers in your Minimus FIPS image and verify the OpenSSL FIPS module
+- [Compliance](https://docs.minimus.io/compliance/image-compliance.md): How to verify that your Minimus container images meet security, licensing, and regulatory requirements
+- [Java FIPS Validated Module](https://docs.minimus.io/compliance/java-fips.md): Understand how Minimus implements the FIPS 140-3 validated Java module in its images including OpenJDK, OpenJRE, and Amazon-Corretto
+- [SLSA L3](https://docs.minimus.io/compliance/slsa.md): Understand how Minimus adheres to the SLSA L3 standard for assuring software supply chain security
+- [Security Technical Implementation Guides (STIG)](https://docs.minimus.io/compliance/stig.md): About STIG guidelines for enhanced security and how to verify them in Minimus images using the Minimus OpenSCAP image
+- [Check if Your Container Has a Shell](https://docs.minimus.io/debugging/debug.md): How to check if a Docker or Kubernetes container has a shell and what to do when it does not
+- [Debug in Kubernetes](https://docs.minimus.io/debugging/ephemeral-container.md): Using ephemeral containers to interactively troubleshoot Kubernetes production environments
+- [Mount a Debugger](https://docs.minimus.io/debugging/mount-debugger.md): How to debug a Minimus container by mounting debug tools
+- [Authenticated Package Access](https://docs.minimus.io/enterprise-edition/authenticated-package-access.md): Install Minimus packages directly in Minimus images using a package manager to experiment with options and extend images
+- [Authenticating to the Minimus Registry](https://docs.minimus.io/enterprise-edition/authentication.md): How to log into the Minimus registry to pull and verify images
+- [File Bundles](https://docs.minimus.io/enterprise-edition/file-bundles.md): Centrally manage file bundles and certificates for your private images in Minimus
+- [Image Creator](https://docs.minimus.io/enterprise-edition/image-creator.md): Create your own private image by customizing a standard Minimus image
+- [minicli](https://docs.minimus.io/enterprise-edition/minicli.md): Use the minicli command-line tool to define, build, and manage private Minimus images from your terminal or CI/CD pipeline.
+- [Supply Chain Protection](https://docs.minimus.io/enterprise-edition/supply-chain.md): Set up guardrails to prevent malicious package uploads based on age, download reputation and more using Minimus supply chain policies
+- [Daily security updates](https://docs.minimus.io/foundations/daily-updates.md): Understand the Minimus release cycle for images and packages
+- [Going Distroless with Minimus](https://docs.minimus.io/foundations/going-distroless.md): How Minimus helps teams migrate from traditional distribution-based images to distroless images with ease
+- [Helm Charts](https://docs.minimus.io/foundations/helm-charts.md): Deploy secure apps faster with Minimus Helm charts for Minimus images
+- [Image Card](https://docs.minimus.io/foundations/image-card.md): Explore the information for every type of image, including available image versions, versioned vulnerability reports, SBOM, and risk reduction comparison
+- [Image Options](https://docs.minimus.io/foundations/image-types.md): Understand your options for each image type to decide between the standard, advanced, FIPS validated, or hardened options
+- [Image Version Card](https://docs.minimus.io/foundations/image-version.md): Dive into the image version card for a detailed vulnerability report, digest history, SBOM, and detailed specification
+- [Pull Always](https://docs.minimus.io/foundations/pull-policy.md): Why you should always pull fresh Minimus images and how to configure pull policies in Docker, Kubernetes, and Helm
+- [Image and Chart Gallery](https://docs.minimus.io/gallery.md): Browse the Minimus gallery of images and Helm charts to find the right assets for your project.
+- [AWS Lambda Tutorial](https://docs.minimus.io/guides/aws-lambda-deployment.md): Build applications using Minimus container images to run on AWS Lambda
+- [Flyway Database Migration](https://docs.minimus.io/guides/flyway-migration.md): Run Flyway database migrations using the Minimus Flyway image
+- [Slim Down an App Using a Runtime Base](https://docs.minimus.io/guides/golang.md): How to build more secure apps using multi-stage builds with a runtime base image
+- [Deploy Ingress-NGINX-controller over Kubernetes](https://docs.minimus.io/guides/ingress-nginx-controller.md): Get started with the Minimus Ingress-NGINX-controller image in minikube
+- [Deploy Istio over Kubernetes](https://docs.minimus.io/guides/istio.md): Deploy Istio Pilot and Istio Proxy over Kubernetes using Minimus images in a minikube environment
+- [Java Tutorial](https://docs.minimus.io/guides/java.md): How to build more secure Java apps using OpenJDK and OpenJRE
+- [Deploy NGINX over Kubernetes](https://docs.minimus.io/guides/k8s-nginx.md): Get started with the Minimus Nginx image in minikube
+- [Secure an App Using a Multi-Stage Build](https://docs.minimus.io/guides/multi-stage-build.md): How to build more secure apps using a dev image for the builder stage in a multi-stage build
+- [NGINX Tutorial](https://docs.minimus.io/guides/nginx.md): Deploy a secure and minimal NGINX container image built by Minimus to optimize security
+- [PHP-FPM Tutorial](https://docs.minimus.io/guides/php-fpm.md): Deploy a secure and minimal PHP-FPM container image built by Minimus to optimize security
+- [Python Tutorial](https://docs.minimus.io/guides/python.md): Build a secure and minimal python app using the Minimus python image
+- [Trino Plugins](https://docs.minimus.io/guides/trino-plugins.md): Add and configure Trino plugins in Minimus Trino images using Creator, including FIPS-compatible plugins and catalog setup examples.
+- [About SBOMs](https://docs.minimus.io/integrity/sbom.md): Understand what's included in the SBOM provided for every Minimus image version
+- [About Software Integrity](https://docs.minimus.io/integrity/sigstore.md): Learn how software integrity and trustworthiness can be ensured with the Sigstore toolchain
+- [Trust Center](https://docs.minimus.io/integrity/trust.md): Minimus commitments on service availability, vulnerability remediation, certifications, and data confidentiality
+- [Verifying Images & SBOMs](https://docs.minimus.io/integrity/verify.md): Use Cosign to verify image signatures and SBOM attestations for Minimus images
+- [Introduction](https://docs.minimus.io/introduction.md): Get started with Minimus secure container images and Helm charts
+- [Why Minimus](https://docs.minimus.io/introduction/about-minimus.md): A short introduction to Minimus explaining how Minimus images can radically reduce the amount of vulnerabilities that impact your cloud environment
+- [Architecture](https://docs.minimus.io/introduction/architecture.md): Understand the Minimus pipeline for building and testing secure packages and images
+- [Compatibility](https://docs.minimus.io/introduction/compatibility.md): Minimus images prioritize compatibility to minimize migration overhead and potential errors
+- [Elevate security with Enterprise Edition](https://docs.minimus.io/introduction/enterprise-edition-member.md): Set up advanced Minimus features with Enterprise Edition
+- [Let's Get Started](https://docs.minimus.io/introduction/get-started.md): Step-by-step guide to pulling your first images and deploying them in your environment using Minimus Helm charts
+- [Enterprise Edition](https://docs.minimus.io/introduction/highlights.md): Make the most of Minimus with special features reserved for Enterprise Edition
+- [Dev vs. Prod Images](https://docs.minimus.io/introduction/image-variants.md): Why Minimus offers dev images with dev tools alongside more minimal production images
+- [Image Tags](https://docs.minimus.io/introduction/offering.md): Pull any Minimus image version by any tag
+- [Image Lines & Versions](https://docs.minimus.io/introduction/versions.md): Understand how Minimus images are organized by image lines and versions
+- [Logs](https://docs.minimus.io/manage/activity-log.md): Audit user actions and system events for complete visibility and accountability
+- [Install minicli](https://docs.minimus.io/manage/minicli.md): Install the Minimus command-line tool to manage Image Creator as code and more
+- [Sync with Google Artifact Registry](https://docs.minimus.io/manage/mirror-to-gcp-artifact-registry.md): Set up pull through to mirror Minimus images to Google Artifact Registry
+- [Network Requirements](https://docs.minimus.io/manage/network.md): Firewall rules, DNS endpoints, and port requirements for connecting to the Minimus registry and console
+- [Sync to Self-hosted Private Registry](https://docs.minimus.io/manage/self-hosted-registry.md): Sync your Minimus images to your self-hosted private registry using the Minimus service
+- [Sync with JFrog Artifactory](https://docs.minimus.io/manage/sync-with-jfrog-artifactory.md): Set up pull through to mirror Minimus images to JFrog Artifactory
+- [Managing Tokens](https://docs.minimus.io/manage/token.md): Manage your tokens to authenticate to the Minimus Registry and pull Minimus images and/or packages
+- [User Groups](https://docs.minimus.io/manage/user-groups.md): Configure SAML group-based role assignments in Minimus for Azure, Okta, Google, and other identity providers
+- [User Roles](https://docs.minimus.io/manage/user-roles.md): Roles define and manage user access permissions for Minimus users
+- [User Management](https://docs.minimus.io/manage/users.md): Add, remove, and manage team members and their roles in the Minimus console using GitHub, Google, Microsoft, or SAML
+- [What's New](https://docs.minimus.io/release-notes.md): Stay in the know about recent Minimus releases and updates
+- [What's New 2025](https://docs.minimus.io/release-notes-2025.md): See previous Minimus releases and updates to understand how the product has evolved
+- [Actions](https://docs.minimus.io/remediate/actions.md): Proactively respond to security updates related to your Minimus images using Minimus Actions
+- [Security Advisories](https://docs.minimus.io/remediate/advisories.md): Keeping up with vulnerability reports for your Minimus images
+- [Create Action](https://docs.minimus.io/remediate/create-action.md): Set up webhooks, GitHub Actions, email, and Slack alerts for when a vulnerability is fixed or a new version is released
+- [Advisory Drill-Down](https://docs.minimus.io/remediate/cve-advisory.md): Drill down on a specific advisory to learn more about the risk and the affected images
+- [Fix Dates](https://docs.minimus.io/remediate/fix-date.md): Understand the difference between the advisory fix date and image fix date
+- [Cherry Picking Patches](https://docs.minimus.io/remediate/policies/cherry-pick-patches.md): Understand the Minimus approach to cherry-picking vulnerability fixes before they are officially committed to the upstream
+- [Vulnerability Remediation Policy](https://docs.minimus.io/remediate/policies/remediation-policy.md): Understand the Minimus vulnerability patching policy
+- [CVSS Severity](https://docs.minimus.io/remediate/priorities/cvss.md): About CVSS severity classifications in Minimus advisories
+- [EPSS Exploitability Metrics](https://docs.minimus.io/remediate/priorities/epss.md): About EPSS exploitability metrics in Minimus advisories
+- [CISA KEV](https://docs.minimus.io/remediate/priorities/kev.md): How Minimus uses the CISA Known Exploited Vulnerabilities catalog to label and prioritize active exploits
+- [Prioritizing Vulnerabilities](https://docs.minimus.io/remediate/prioritize.md): Risk based vulnerability prioritization based on EPSS, CVSS severity, and CISA KEV for your Minimus container images
+- [Accelerate Remediation with Minimus](https://docs.minimus.io/remediate/remediate.md): Understand how Minimus images help your team keep your cloud perimeter secure with less effort
+- [Threat Intel](https://docs.minimus.io/remediate/threat-intel.md): Use Minimus threat intel to secure your operations against exploitable vulnerabilities impacting your Minimus images and get notified of fixed versions
+- [Minimus Advisories Feed](https://docs.minimus.io/scanning/advisories-feed.md): Understand the purpose of the Minimus Advisories Feed and how it is used to improve scanner results and prevent false positives
+- [Comparing Vulnerability Scanning Reports](https://docs.minimus.io/scanning/compare-scanner-results.md): Understand how the Minimus vulnerability scanner report differs from other vulnerability scanners, including Grype, Trivy, etc.
+- [How to Integrate with Scanners](https://docs.minimus.io/scanning/scanner-integration.md): Follow the guide to integrate your scanner with the Minimus Advisories Feed when it isn't natively supported by Minimus
+- [Scanner Support](https://docs.minimus.io/scanning/scanner-support.md): Know which scanners have built-in support for Minimus images
+- [Microsoft Azure SSO](https://docs.minimus.io/sso/azure.md): Configure single-sign-on (SSO) for Minimus via Azure
+- [Google SSO](https://docs.minimus.io/sso/google.md): Configure single-sign-on (SSO) for Minimus via Google
+- [Keycloak SSO](https://docs.minimus.io/sso/keycloak.md): Configure single-sign-on (SSO) for Minimus via Keycloak
+- [Okta SSO](https://docs.minimus.io/sso/okta.md): Configure single-sign-on (SSO) for Minimus via Okta
+- [Configure SSO (Generic Guide)](https://docs.minimus.io/sso/saml.md): Configure single-sign-on (SSO) to Minimus using any SAML 2.0 identity provider
+- [Status Page](https://docs.minimus.io/status.md): Minimus services status page provides updates on scheduled maintenance, outages, and other service-related events.
+- [Known Issues](https://docs.minimus.io/troubleshooting/known-issues.md): The official listing of Minimus known issues. Thank you for your patience while we investigate and fix the issues.
+- [Common Issues](https://docs.minimus.io/troubleshooting/troubleshooting.md): Troubleshoot general issues when working with Minimus
+- [Troubleshooting Image Migrations](https://docs.minimus.io/troubleshooting/troubleshooting-images.md): A collection of troubleshooting resources and solutions for diverse technical issues

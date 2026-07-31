@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.minimus.io/manage/minicli
+description: >-
+  Authentication profile for the Minimus programmatic surfaces. There is no
+  documented public OAuth2/OIDC REST API; access is via a static bearer token
+  used by minicli, plus an open (unauthenticated) MinimOS package repository.
+docs: https://docs.minimus.io/manage/minicli
+schemes:
+- id: minicli-token
+  type: bearer-token
+  in: environment-or-login
+  parameter: MINICLI_TOKEN
+  token_management: https://images.minimus.io/manage/token
+  usage:
+  - 'export MINICLI_TOKEN={token}   # CI/CD'
+  - 'echo "{token}" | minicli login  # local'
+  scope: 'Grants access to manage private image recipes and builds for the account.'
+  evidence: 'minicli docs: "All commands require MINICLI_TOKEN to be set."'
+- id: minimos-apk-repo
+  type: none
+  in: none
+  scope: 'Open MinimOS package repository packages.mini.dev/os; no credentials required.'
+  evidence: 'Package-manager docs: "the MinimOS package repository is open to all, there is no need to pass credentials."'
+enterprise:
+  sso: 'Enterprise SSO and RBAC for unlimited users (Enterprise plan).'
+  evidence: 'Pricing: "Enterprise SSO and RBAC for unlimited users."'
+notes: >-
+  Container image pulls from the OCI registry use standard registry auth
+  (token/credential) where images are private; public starter images are open.
